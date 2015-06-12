@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var mainCtrl = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainViewController
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window?.rootViewController = mainCtrl
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
